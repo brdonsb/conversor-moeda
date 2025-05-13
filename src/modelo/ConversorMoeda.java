@@ -18,6 +18,10 @@ public class ConversorMoeda {
     }
 
     public double converteMoeda(){
+        String APYKEY = "89bd25af4ce778f97e9d258a";
+        String endereco = "https://v6.exchangerate-api.com/v6/" + APYKEY + "pair/" + this.moedaAConverter + "/" + this.moedaConvertida + "/" + this.valorAConverter;
+        System.out.println(endereco);
+
         return 4.0;
     }
 }

@@ -29,10 +29,8 @@ public class Principal {
             opcao = leitura.nextInt();
             if (opcao >= 1 && opcao <= 7) {
                 if (opcao != 7) {
-                    System.out.println("A opcao escolhida foi: " + opcao);
                     System.out.println("Digite o valor que queseja converter: ");
                     valorAConverter = leitura.nextDouble();
-
                     switch (opcao) {
                         case 1:
                             moedaAConverter = "USD";
@@ -59,8 +57,7 @@ public class Principal {
                             moedaConvertida = "USD";
                             break;                       
                     }
-                    System.out.println("O valor a ser convertido é: " + valorAConverter);                
-                    ConversorMoeda conversor = new ConversorMoeda(moedaAConverter, moedaConvertida, 20.5);
+                    ConversorMoeda conversor = new ConversorMoeda(moedaAConverter, moedaConvertida, valorAConverter);
                     System.out.println("O valor convertido É: " + conversor.getValorConvertido());           
                 }
             }else{
