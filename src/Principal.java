@@ -1,11 +1,15 @@
 import java.util.Scanner;
 
+import modelo.ConversorMoeda;
+
 public class Principal {
     public static void main(String[] args) throws Exception {
         Scanner leitura = new Scanner(System.in);
         int opcao = 0;        
-        double valorParaConversao;
-
+        String moedaAConverter = "";
+        String moedaConvertida = "";
+        double valorAConverter = 0;
+    
         String menu = """
                 **************************************************************
                 Seja bem vindo/a ao Conversor de Moeda =]
@@ -27,12 +31,42 @@ public class Principal {
                 if (opcao != 7) {
                     System.out.println("A opcao escolhida foi: " + opcao);
                     System.out.println("Digite o valor que queseja converter: ");
-                    valorParaConversao = leitura.nextDouble();
-                    System.out.println("O valor a ser convertido é: " + valorParaConversao);                
+                    valorAConverter = leitura.nextDouble();
+
+                    switch (opcao) {
+                        case 1:
+                            moedaAConverter = "USD";
+                            moedaConvertida = "ARS";
+                            break;
+                        case 2:
+                            moedaAConverter = "ARS";
+                            moedaConvertida = "USD";
+                            break;
+                        case 3:
+                            moedaAConverter = "USD";
+                            moedaConvertida = "BRL";
+                            break;
+                        case 4:
+                            moedaAConverter = "BRL";
+                            moedaConvertida = "USD";
+                            break;                        
+                        case 5:
+                            moedaAConverter = "USD";
+                            moedaConvertida = "COP";
+                            break;                        
+                        case 6:
+                            moedaAConverter = "COP";
+                            moedaConvertida = "USD";
+                            break;                       
+                    }
+                    System.out.println("O valor a ser convertido é: " + valorAConverter);                
+                    ConversorMoeda conversor = new ConversorMoeda(moedaAConverter, moedaConvertida, 20.5);
+                    System.out.println("O valor convertido É: " + conversor.getValorConvertido());           
                 }
             }else{
                 System.out.println("Voce digitou uma opcao inválida!");
             }
         }
+        leitura.close();
     }
 }
