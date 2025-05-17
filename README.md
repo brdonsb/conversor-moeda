@@ -1,4 +1,4 @@
-# {Conversor de moedas}
+# Conversor de moedas
 
 Este repositório contém um projeto de conversor de moedas desenvolvido como requisito para conclusão do plano de estudos ONE | TECH FOUNDATION - Especialização Back-End.
 
