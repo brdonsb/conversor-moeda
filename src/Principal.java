@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import modelo.ConversorMoeda;
+import modelo.ConversorMoedaExchangerate;
 
 public class Principal {
     public static void main(String[] args) throws Exception {
@@ -14,12 +15,12 @@ public class Principal {
                 **************************************************************
                 Seja bem vindo/a ao Conversor de Moeda =]
 
-                1) Dólar =>> Peso argentino
-                2) Peso argentino =>> Dólar
-                3) Dólar =>> Real Brasileiro
-                4) Real Brasileiro =>> Dólar
-                5) Dólar =>> Peso colombiano
-                6) Peso colombiano =>> Dólar
+                1) Dólar americano =>> Peso argentino
+                2) Peso argentino =>> Dólar americano
+                3) Dólar americano =>> Real Brasileiro
+                4) Real Brasileiro =>> Dólar americano
+                5) Dólar americano =>> Peso colombiano
+                6) Peso colombiano =>> Dólar americano
                 7) Sair
                 Escolha uma opção válida>
                 **************************************************************
@@ -57,7 +58,10 @@ public class Principal {
                             moedaConvertida = "USD";
                             break;                       
                     }
-                    ConversorMoeda conversor = new ConversorMoeda(moedaAConverter, moedaConvertida, valorAConverter);
+
+                    ConversorMoeda conversor = new ConversorMoedaExchangerate(moedaAConverter, moedaConvertida, valorAConverter);
+                    conversor.converteMoeda();
+                    System.out.println(conversor);
                     System.out.println("O valor convertido É: " + conversor.getValorConvertido());           
                 }
             }else{
