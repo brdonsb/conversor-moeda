@@ -1,18 +1,13 @@
-## Getting Started
+# {Conversor de moedas}
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este repositório contém um projeto de conversor de moedas desenvolvido como requisito para conclusão do plano de estudos ONE | TECH FOUNDATION - Especialização Back-End.
 
-## Folder Structure
+## Funcionalidades
+O projeto apresenta um menu com as opções de moedas para conversão.
+o usuário digita o código para conversão e o valor a ser convertido e recebe como resultado o resultado da conversão
 
-The workspace contains two folders by default, where:
+## Base de dados
+O projeto usa como base de dados para a conversão das moedas a exchamgerate-api (https://app.exchangerate-api.com) 
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Tratamento dos dados
+Os dados recebidos da API são tratados com o uso da biblioteca Gson
