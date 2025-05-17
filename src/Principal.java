@@ -58,11 +58,8 @@ public class Principal {
                             moedaConvertida = "USD";
                             break;                       
                     }
-
                     ConversorMoeda conversor = new ConversorMoedaExchangerate(moedaAConverter, moedaConvertida, valorAConverter);
-                    conversor.converteMoeda();
-                    System.out.println(conversor);
-                    System.out.println("O valor convertido É: " + conversor.getValorConvertido());           
+                    System.out.println(valorAConverter +" " + moedaAConverter + " convertidos para " + moedaConvertida + " geram: " + conversor.getValorConvertido() + " " + moedaConvertida);           
                 }
             }else{
                 System.out.println("Voce digitou uma opcao inválida!");
